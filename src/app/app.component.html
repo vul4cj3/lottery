@@ -1,97 +1,103 @@
 <div class="container">
-  <!-- nav section -->
   <nav>
-    <ul class="stars">
-      <li class="item"><img src="../assets/image/star-of-david-solid.svg" style="width: 12px; height:12px;"><a
-          (click)="scrollSec('rules-section')">Rules</a></li>
-      <li class="item"><img src="../assets/image/star-of-david-solid.svg" style="width: 12px; height:12px;"><a
-          (click)="scrollSec('rewards-section')">Rewards</a></li>
-      <li class="item"><img src="../assets/image/star-of-david-solid.svg" style="width: 12px; height:12px;"><a
-          (click)="scrollSec('game-section')">Game</a></li>
-    </ul>
+    <ul class="stars"><li class="item">庶嫁<img src="assets/image/star-of-david-solid.svg" style="width: 12px; height:12px;">なんちゃって一番くじ</li></ul>
   </nav>
-  <!-- rules section -->
-  <div id="rules-section">
-    <h5>Title</h5>
-  </div>
-  <!-- rewards section -->
-  <div id="rewards-section">
-    <h5>title2</h5>
-  </div>
   <!-- minigame section -->
   <div id="game-section">
     <section class="memory-game">
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ኡስታዙኢዛቤላበቅርቡያገባኛል</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ኡስታዙኢዛቤላበቅርቡያገባኛል</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ኡስታዝኑሩ</p>
-        <img class="back-face" src="../assets/image/back.png"/>
-      </div>
-
-      <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ኢዛቤላ፣ኤሊዮቲን፣ሹታን</p>
-        <img class="back-face" src="../assets/image/back.png"/>
-      </div>
-      <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ብራያንአንደርሰን</p>
-        <img class="back-face" src="../assets/image/back.png" />
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ኡስታዝኑሩ</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
 
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>አሚሪስካምብል</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ኢዛቤላ፣ኤሊዮቲን፣ሹታን</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ማሪዬታሃልሰን</p>
-        <img class="back-face" src="../assets/image/back.png"/>
-      </div>
-
-      <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ገመሚአምቢንይተኩ</p>
-        <img class="back-face" src="../assets/image/back.png"/>
-      </div>
-      <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>የጌሚኒመርሪባቢንይተኩ</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ብራያንአንደርሰን</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
 
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ጋይናይቶላንድ</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>አሚሪስካምብል</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ክሪስቶፈርሮንሮዝለር</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ማሪዬታሃልሰን</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
 
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ኒሳናንሃደር</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ገመሚአምቢንይተኩ</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ኡራutaየግልየውስጥጉዳይሉ</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>የጌሚኒመርሪባቢንይተኩ</p>
+        <img class="back-face" src="assets/image/back.png" />
+      </div>
+
+      <div class="memory-card" (click)="flipCard($event.currentTarget)">
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ጋይናይቶላንድ</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>የዩሱሊየግልየውስጥጉዳይሉ</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ክሪስቶፈርሮንሮዝለር</p>
+        <img class="back-face" src="assets/image/back.png" />
+      </div>
+
+      <div class="memory-card" (click)="flipCard($event.currentTarget)">
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ኒሳናንሃደር</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
       <div class="memory-card" (click)="flipCard($event.currentTarget)">
-        <img class="front-face" src="../assets/image/front.png" /><p>ታላቁሳጅኡርሂ</p>
-        <img class="back-face" src="../assets/image/back.png"/>
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ኡራutaየግልየውስጥጉዳይሉ</p>
+        <img class="back-face" src="assets/image/back.png" />
+      </div>
+      <div class="memory-card" (click)="flipCard($event.currentTarget)">
+        <img class="front-face" src="assets/image/front.png" />
+        <p>የዩሱሊየግልየውስጥጉዳይሉ</p>
+        <img class="back-face" src="assets/image/back.png" />
+      </div>
+      <div class="memory-card" (click)="flipCard($event.currentTarget)">
+        <img class="front-face" src="assets/image/front.png" />
+        <p>ታላቁሳጅኡርሂ</p>
+        <img class="back-face" src="assets/image/back.png" />
       </div>
     </section>
     <div id="popup" class="message">
       <div class="showup">
-        <h2>Congratulation!!!</h2>
-        <div class="congratulation">
-          It's {{prizemsg}} !! Thanks for your participate.
-        </div>
+        <h2>おめでとうぉ！！</h2>
+        <h2>{{prizemsg}}賞 当たったよぉ〜！！</h2>
+        <img class="urushu2" src="assets/image/tad2.png"/>
       </div>
     </div>
     <div id="popup2" class="message">
-      <div><input type="text" id="twitterID"><a (click)="setName()">送出</a></div>
+      <div class="showup">
+        <span>VIPなお客様いただけでしょうかぁ？</span>
+        <span>こちらに青い鳥のIDを入力してくださいねぇ〜</span>
+        <input type="text" id="twitterID" placeholder="@Urushu_Suneiburu" (keydown)="$event.keyCode==13?setName():true">
+        <div class="msg-btn">
+          <a (click)="setName()">とにかく渡す！！</a>
+          <a>渡さない</a>
+        </div>
+        <img class="urushu1" src="assets/image/tda.png"/>
+      </div>
     </div>
   </div>

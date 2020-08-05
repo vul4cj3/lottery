@@ -3,6 +3,7 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { CardsService } from './shoutotsu/cards.service';
 import { CardItem } from './shoutotsu/carditem';
 import { map, reduce } from 'rxjs/operators';
+import { CheckboxControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -90,7 +91,7 @@ export class AppComponent implements OnInit {
       res.forEach(item => {
         childData[num] = item.key + (item.val.enable == false ? ';lock' : '');
 
-        if (item.enable === false) {
+        if (item.val.enable == false) {
           over--;
         }
 
@@ -156,8 +157,29 @@ export class AppComponent implements OnInit {
           }
         }
       }
-    });
 
+      this.chkBoard();
+
+    });
+  }
+
+  chkBoard(): void {
+    let over = 14;
+    this.cardsservice.getCards().subscribe(res => {
+      res.forEach(item => {
+
+        if (item.val.enable == false) {
+          over--;
+        }
+      });
+
+      if (over === 0) {
+        this.lockBoard = true;
+        this.modal1.classList.add('show');
+
+        localStorage.setItem('lotteryend', 'yes');
+      }
+    });
   }
 
   resetBoard(): void {
@@ -203,11 +225,33 @@ export class AppComponent implements OnInit {
 
   setName(): void {
     const val = document.getElementById('twitterID') as HTMLInputElement;
+    if (val.value == '') { return alert('ID can not empty!!'); }
     localStorage.setItem('twitterAC', val.value);
 
     this.modal2.classList.remove('show');
 
-    this.shuffle();
+    const promise = new Promise((resolve, reject) => {
+      let over = 14;
+      this.cardsservice.getCards().subscribe(res => {
+        res.forEach(item => {
+
+          if (item.val.enable == false) {
+            over--;
+          }
+        });
+
+        if (over === 0) {
+          this.lockBoard = true;
+          localStorage.setItem('lotteryend', 'yes');
+        }
+        resolve('success');
+      });
+
+    });
+
+    promise.then((val) => {
+      this.shuffle();
+    });
   }
 
 }
