@@ -251,3 +251,192 @@ p {
   top:-100px;
   right:0;
 }
+
+@media screen and (min-width:768px) and (max-width:1024px){
+  .showup h2 {
+    font-size: 16px;
+    font-family: 'Fascinate Inline', serif;
+  }
+
+  #popup2 .showup span{
+    display: block;
+    width:250px;
+    font-size: 16px;
+  }
+
+  #popup2 .showup input{
+    border:0;
+    outline:0;
+    color: rgb(190, 156, 92);
+    background-color: transparent;
+    border-bottom: 1px dotted rgb(51, 55, 70);
+    width:200px;
+    margin-top:10px;
+  }
+
+  .msg-btn{
+    margin-top: 20px;
+  }
+
+  .msg-btn a{
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: rgb(190, 156, 92);
+    border-radius: 5px;
+    color: #fff;
+    margin-right:10px;
+    transition: .3s;
+  }
+
+  .urushu1{
+    position: absolute;
+    width:250px;
+    height:250px;
+    top:-50px;
+    right:-65px;
+  }
+
+  .urushu2{
+    position: absolute;
+    width:250px;
+    height:250px;
+    top:-100px;
+    right:-75px;
+  }
+
+}
+
+
+@media screen and (max-width:767px){
+  #game-section{
+    border: 0;
+  }
+
+  nav .stars .item{
+    border-bottom:1px solid rgb(236, 235, 235);
+    margin-left: 50px;
+  }
+
+  .memory-game {
+    width: 316px;
+    height: 530px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+
+  .memory-card.flip p{
+    display: block;
+    transform: rotateY(180deg);
+    padding: 10px;
+    font-size: 10px;
+    color: #fff;
+    overflow-wrap: break-word;
+  }
+
+  .message {
+    position: fixed;
+    background: rgba(178, 186, 206, 0.4);
+    transition: opacity 400ms;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .showup {
+    margin: 170px 10px;
+    background: rgb(253, 248, 240);
+    color:rgb(32, 30, 30);
+    border-radius: 6px;
+    width: 90%;
+    position: relative;
+    font-family: 'Fascinate Inline', serif;
+  }
+
+  .showup h2 {
+    font-size: 16px;
+    font-family: 'Fascinate Inline', serif;
+  }
+
+  .showup .close {
+    position: absolute;
+    top: 21px;
+    right: 32px;
+    transition: all 200ms;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .showup .congratulation, .stats {
+    max-height: 50%;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .show {
+    visibility: visible;
+    opacity: 100;
+  }
+
+  .message h2 {
+    text-align: center;
+    font-family: 'Fascinate Inline', serif;
+  }
+
+  #popup2 .showup span{
+    display: block;
+    width:175px;
+    font-size: 12px;
+  }
+
+  #popup2 .showup input{
+    border:0;
+    outline:0;
+    color: rgb(190, 156, 92);
+    background-color: transparent;
+    border-bottom: 1px dotted rgb(51, 55, 70);
+    width:150px;
+    margin-top:10px;
+  }
+
+  .msg-btn{
+    margin-top: 20px;
+  }
+
+  .msg-btn a{
+    padding: 2px 5px;
+    font-size: 12px;
+    background-color: rgb(190, 156, 92);
+    border-radius: 5px;
+    color: #fff;
+    margin-right:10px;
+    transition: .3s;
+  }
+
+  .msg-btn a:hover{
+    background-color: rgb(206, 168, 97);
+  }
+
+  .urushu1{
+    position: absolute;
+    width:250px;
+    height:250px;
+    top:-70px;
+    right:-65px;
+  }
+
+  .urushu2{
+    position: absolute;
+    width:250px;
+    height:250px;
+    top:-100px;
+    right:-75px;
+  }
+}
+

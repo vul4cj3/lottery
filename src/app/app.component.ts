@@ -62,7 +62,7 @@ export class AppComponent implements OnInit {
 
       // update
       // tslint:disable-next-line: max-line-length
-      localStorage.setItem('fcardkey', this.firstCard.id);
+      localStorage.setItem('fcardkey', this.firstCard.id + ';lock');
       this.updatecard(this.firstCard.id, { winner: localStorage.getItem('twitterAC'), enable: false, update: this.getnowDate() });
 
       return;
@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
     // this.secondCard.removeEventListener('click', this.flipCard(e));
     // update
     // tslint:disable-next-line: max-line-length
-    localStorage.setItem('scardkey', this.secondCard.id);
+    localStorage.setItem('scardkey', this.secondCard.id + ';lock');
     this.updatecard(this.secondCard.id, { winner: localStorage.getItem('twitterAC'), enable: false, update: this.getnowDate() });
 
   }
@@ -119,10 +119,11 @@ export class AppComponent implements OnInit {
       }
 
       // defense F5 action firstcard is already by fliped situation
-      if (localStorage.getItem('fcardkey') != undefined && localStorage.getItem('scardkey') == undefined) {
-        const fcard = document.getElementById(localStorage.getItem('fcardkey'));
-        fcard.classList.add('flip');
-      }
+      // if (localStorage.getItem('fcardkey') != undefined && localStorage.getItem('scardkey') == undefined) {
+      //   const fcard = document.getElementById(localStorage.getItem('fcardkey'));
+      //   fcard.classList.remove('lock');
+      //   fcard.classList.add('flip');
+      // }
 
     });
 
